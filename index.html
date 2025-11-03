@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -164,6 +164,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            max-width: 1360px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
         }
         
         .header__logo {
@@ -176,6 +180,38 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+        }
+        
+        /* Language Switcher */
+        .lang-switcher {
+            background-color: var(--color-terracotta-600);
+            border: 1px solid var(--color-neutral-white);
+            border-radius: 20px;
+            padding: 8px 16px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: absolute;
+            right: 0;
+        }
+        
+        .lang-switcher:hover {
+            background-color: var(--color-neutral-white);
+            border-color: var(--color-neutral-white);
+        }
+        
+        .lang-switcher__text {
+            color: var(--color-neutral-white);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            transition: color var(--transition-fast);
+        }
+        
+        .lang-switcher:hover .lang-switcher__text {
+            color: var(--color-terracotta-600);
         }
         
         /* ============================================
@@ -1039,6 +1075,9 @@
             <a href="#" class="header__logo" aria-label="Primeclass">
                 <img src="assets/icons/logo.svg" alt="Primeclass" class="header__logo-img">
             </a>
+            <button class="lang-switcher" id="langSwitcher" aria-label="Switch language">
+                <span class="lang-switcher__text" id="langSwitcherText">EN</span>
+            </button>
         </nav>
     </header>
 
@@ -1052,21 +1091,21 @@
     <!-- Tab Navigation -->
     <nav class="tab-nav" id="tabNav">
         <div class="tab-nav__container">
-            <button class="tab-nav__item body-default active" data-target="about">About</button>
-            <button class="tab-nav__item body-default" data-target="values">Values</button>
-            <button class="tab-nav__item body-default" data-target="benefits">Benefits</button>
-            <button class="tab-nav__item body-default" data-target="stories">Featured stories</button>
+            <button class="tab-nav__item body-default active" data-target="about" data-i18n="nav.about">About</button>
+            <button class="tab-nav__item body-default" data-target="values" data-i18n="nav.values">Values</button>
+            <button class="tab-nav__item body-default" data-target="benefits" data-i18n="nav.benefits">Benefits</button>
+            <button class="tab-nav__item body-default" data-target="stories" data-i18n="nav.stories">Featured stories</button>
         </div>
     </nav>
 
     <!-- About Section -->
     <section class="about" id="about">
         <div class="about__content">
-            <h2 class="headline-h3 about__title">About</h2>
+            <h2 class="headline-h3 about__title" data-i18n="about.title">About</h2>
             <div class="about__text-container">
-                <h3 class="headline-h4">More Than Transit - A Moment in Itself</h3>
-                <p class="body-default">We believe the airport should be more than a place of transit - it should be a moment in itself, a pause between destinations. Every traveler moves at a different rhythm, and we've designed our spaces to embrace them all. We embody a lifestyle-driven experience that transforms the journey into something memorable - turning waiting time into meaningful moments.</p>
-                <p class="body-default">Welcome to Primeclass. Your journey begins here.</p>
+                <h3 class="headline-h4" data-i18n="about.heading">More Than Transit - A Moment in Itself</h3>
+                <p class="body-default" data-i18n="about.paragraph1">We believe the airport should be more than a place of transit - it should be a moment in itself, a pause between destinations. Every traveler moves at a different rhythm, and we've designed our spaces to embrace them all. We embody a lifestyle-driven experience that transforms the journey into something memorable - turning waiting time into meaningful moments.</p>
+                <p class="body-default" data-i18n="about.paragraph2">Welcome to Primeclass. Your journey begins here.</p>
             </div>
         </div>
         <div class="about__image-wrapper">
@@ -1080,9 +1119,9 @@
     <section class="values" id="values">
         <div class="values__container">
             <div class="values__header">
-                <h2 class="headline-h3 values__title">Values</h2>
-                <p class="values__intro body-large">We offer a seamless, thoughtfully curated experience that transforms airport travel from the ordinary into the extraordinary.</p>
-                <p class="values__intro body-large">Our premium experience design is built around lifestyle-driven choices, ensuring that every aspect of the traveler's journey is thoughtfully planned.</p>
+                <h2 class="headline-h3 values__title" data-i18n="values.title">Values</h2>
+                <p class="values__intro body-large" data-i18n="values.intro1">We offer a seamless, thoughtfully curated experience that transforms airport travel from the ordinary into the extraordinary.</p>
+                <p class="values__intro body-large" data-i18n="values.intro2">Our premium experience design is built around lifestyle-driven choices, ensuring that every aspect of the traveler's journey is thoughtfully planned.</p>
             </div>
             <div class="values__details">
                 <div class="values__details-container">
@@ -1092,11 +1131,11 @@
                     <div class="values__list">
                     <div class="values__item expanded" data-value-image="assets/images/values-image.png">
                             <div class="values__item-header">
-                                <h3 class="headline-h5 values__item-title">Staying Tuned</h3>
+                                <h3 class="headline-h5 values__item-title" data-i18n="values.item1.title">Staying Tuned</h3>
                                 <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
                             </div>
                             <div class="values__item-description">
-                                <p class="body-large values__item-text">We believe staying contemporary is key to offering exceptional experiences. By embracing innovation, we keep pace with today’s evolving traveler needs. We ensure that every journey is modern, efficient, and in tune with the latest trends.</p>
+                                                                <p class="body-large values__item-text" data-i18n="values.item1.description">We believe staying contemporary is key to offering exceptional experiences. By embracing innovation, we keep pace with today's evolving traveler needs. We ensure that every journey is modern, efficient, and in tune with the latest trends.</p>
                             </div>
                             <div class="values__item-image">
                                 <img src="assets/images/values-image.png" alt="Staying Tuned">
@@ -1106,11 +1145,11 @@
                     
                     <div class="values__item" data-value-image="assets/images/values-image.png">
                             <div class="values__item-header">
-                                <h3 class="headline-h5 values__item-title">Collective Experience</h3>
+                                <h3 class="headline-h5 values__item-title" data-i18n="values.item2.title">Collective Experience</h3>
                                 <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
                             </div>
                             <div class="values__item-description">
-                                <p class="body-large values__item-text">Primeclass is a vibrant hub where travelers of all backgrounds connect. We believe in creating spaces that foster social connection and a sense of belonging. Every touchpoint is designed to make you feel at home while offering a premium experience.</p>
+                                <p class="body-large values__item-text" data-i18n="values.item2.description">Primeclass is a vibrant hub where travelers of all backgrounds connect. We believe in creating spaces that foster social connection and a sense of belonging. Every touchpoint is designed to make you feel at home while offering a premium experience.</p>
                             </div>
                             <div class="values__item-image">
                                 <img src="assets/images/values-image.png" alt="Collective Experience">
@@ -1120,11 +1159,11 @@
                     
                     <div class="values__item" data-value-image="assets/images/values-image.png">
                             <div class="values__item-header">
-                                <h3 class="headline-h5 values__item-title">Human Touch</h3>
+                                <h3 class="headline-h5 values__item-title" data-i18n="values.item3.title">Human Touch</h3>
                                 <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
                             </div>
                             <div class="values__item-description">
-                                <p class="body-large values__item-text">At Primeclass, we focus on meaningful human interactions. Genuine smiles, personalized service, and attentiveness make every moment special. We believe that these small touches create lasting connections that elevate the journey.</p>
+                                <p class="body-large values__item-text" data-i18n="values.item3.description">At Primeclass, we focus on meaningful human interactions. Genuine smiles, personalized service, and attentiveness make every moment special. We believe that these small touches create lasting connections that elevate the journey.</p>
                             </div>
                             <div class="values__item-image">
                                 <img src="assets/images/values-image.png" alt="Human Touch">
@@ -1134,11 +1173,11 @@
                     
                     <div class="values__item" data-value-image="assets/images/values-image.png">
                             <div class="values__item-header">
-                                <h3 class="headline-h5 values__item-title">Better Future</h3>
+                                <h3 class="headline-h5 values__item-title" data-i18n="values.item4.title">Better Future</h3>
                                 <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
                             </div>
                             <div class="values__item-description">
-                                <p class="body-large values__item-text">We are committed to sustainability and innovation, aligning our services with forward-thinking solutions. By adopting eco-friendly practices, we shape a better future while continuing to offer exceptional experiences. We aim to minimize our environmental impact while staying ahead of industry trends.</p>
+                                <p class="body-large values__item-text" data-i18n="values.item4.description">We are committed to sustainability and innovation, aligning our services with forward-thinking solutions. By adopting eco-friendly practices, we shape a better future while continuing to offer exceptional experiences. We aim to minimize our environmental impact while staying ahead of industry trends.</p>
                             </div>
                             <div class="values__item-image">
                                 <img src="assets/images/values-image.png" alt="Better Future">
@@ -1153,43 +1192,43 @@
     <!-- Benefits Section -->
     <section class="benefits" id="benefits">
         <div class="benefits__container">
-            <h2 class="headline-h3 benefits__title">The Primeclass Experience</h2>
+            <h2 class="headline-h3 benefits__title" data-i18n="benefits.title">The Primeclass Experience</h2>
             <div class="benefits__amenities-list">
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
                             <img src="assets/icons/amenity-armchair.svg" alt="Lounge" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">Lounge</p>
+                        <p class="benefits__amenity-text" data-i18n="benefits.amenity1">Lounge</p>
                     </div>
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
                             <img src="assets/icons/amenity-speedometer.svg" alt="Fast Track" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">Fast Track</p>
+                        <p class="benefits__amenity-text" data-i18n="benefits.amenity2">Fast Track</p>
                     </div>
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
                             <img src="assets/icons/amenity-drink.svg" alt="Meet & Greet" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">Meet & Greet</p>
+                        <p class="benefits__amenity-text" data-i18n="benefits.amenity3">Meet & Greet</p>
                     </div>
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
                             <img src="assets/icons/amenity-tray.svg" alt="Porter" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">Porter</p>
+                        <p class="benefits__amenity-text" data-i18n="benefits.amenity4">Porter</p>
                     </div>
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
                             <img src="assets/icons/amenity-car-luggage.svg" alt="Valet" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">Valet</p>
+                        <p class="benefits__amenity-text" data-i18n="benefits.amenity5">Valet</p>
                     </div>
                     <div class="benefits__amenity-item">
                         <div class="benefits__amenity-icon-wrapper">
                             <img src="assets/icons/amenity-letter-p.svg" alt="Car Park" class="benefits__amenity-icon">
                         </div>
-                        <p class="benefits__amenity-text">Car Park</p>
+                        <p class="benefits__amenity-text" data-i18n="benefits.amenity6">Car Park</p>
                     </div>
                 </div>
             </div>
@@ -1199,7 +1238,7 @@
     <!-- Featured Stories Section -->
     <section class="stories" id="stories">
         <div class="stories__header">
-            <h2 class="headline-h3 stories__title">Featured stories</h2>
+            <h2 class="headline-h3 stories__title" data-i18n="stories.title">Featured stories</h2>
             <div class="stories__nav">
                 <button class="stories__nav-button stories__nav-button--prev" id="storiesPrev">
                     <img src="assets/icons/arrow-forward.svg" alt="Previous" class="stories__nav-icon">
@@ -1218,17 +1257,17 @@
                         </div>
                         <div class="stories__card-content">
                             <div class="stories__card-text">
-                                <p class="headline-h6 stories__card-topic">Topics</p>
-                                <h3 class="title-small stories__card-title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
+                                <p class="headline-h6 stories__card-topic" data-i18n="stories.topic">Topics</p>
+                                <h3 class="title-small stories__card-title" data-i18n="stories.card1.title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
                             </div>
                             <div class="stories__card-meta">
                                 <div class="stories__card-meta-item">
                                     <img src="assets/icons/acute.svg" alt="Read time" class="stories__card-meta-icon">
-                                    <span class="body-small">8mins</span>
+                                    <span class="body-small" data-i18n="stories.card1.readTime">8mins</span>
                                 </div>
                                 <div class="stories__card-meta-item">
                                     <img src="assets/icons/date-range.svg" alt="Date" class="stories__card-meta-icon">
-                                    <span class="body-small">13 Aug 2025</span>
+                                    <span class="body-small" data-i18n="stories.card1.date">13 Aug 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -1241,17 +1280,17 @@
                         </div>
                         <div class="stories__card-content">
                             <div class="stories__card-text">
-                                <p class="headline-h6 stories__card-topic">Topics</p>
-                                <h3 class="title-small stories__card-title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
+                                <p class="headline-h6 stories__card-topic" data-i18n="stories.topic">Topics</p>
+                                <h3 class="title-small stories__card-title" data-i18n="stories.card2.title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
                             </div>
                             <div class="stories__card-meta">
                                 <div class="stories__card-meta-item">
                                     <img src="assets/icons/acute.svg" alt="Read time" class="stories__card-meta-icon">
-                                    <span class="body-small">8mins</span>
+                                    <span class="body-small" data-i18n="stories.card2.readTime">8mins</span>
                                 </div>
                                 <div class="stories__card-meta-item">
                                     <img src="assets/icons/date-range.svg" alt="Date" class="stories__card-meta-icon">
-                                    <span class="body-small">13 Aug 2025</span>
+                                    <span class="body-small" data-i18n="stories.card2.date">13 Aug 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -1264,17 +1303,17 @@
                         </div>
                         <div class="stories__card-content">
                             <div class="stories__card-text">
-                                <p class="headline-h6 stories__card-topic">Topics</p>
-                                <h3 class="title-small stories__card-title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
+                                <p class="headline-h6 stories__card-topic" data-i18n="stories.topic">Topics</p>
+                                <h3 class="title-small stories__card-title" data-i18n="stories.card3.title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
                             </div>
                             <div class="stories__card-meta">
                                 <div class="stories__card-meta-item">
                                     <img src="assets/icons/acute.svg" alt="Read time" class="stories__card-meta-icon">
-                                    <span class="body-small">8mins</span>
+                                    <span class="body-small" data-i18n="stories.card3.readTime">8mins</span>
                                 </div>
                                 <div class="stories__card-meta-item">
                                     <img src="assets/icons/date-range.svg" alt="Date" class="stories__card-meta-icon">
-                                    <span class="body-small">13 Aug 2025</span>
+                                    <span class="body-small" data-i18n="stories.card3.date">13 Aug 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -1287,17 +1326,17 @@
                         </div>
                         <div class="stories__card-content">
                             <div class="stories__card-text">
-                                <p class="headline-h6 stories__card-topic">Topics</p>
-                                <h3 class="title-small stories__card-title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
+                                <p class="headline-h6 stories__card-topic" data-i18n="stories.topic">Topics</p>
+                                <h3 class="title-small stories__card-title" data-i18n="stories.card4.title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
                             </div>
                             <div class="stories__card-meta">
                                 <div class="stories__card-meta-item">
                                     <img src="assets/icons/acute.svg" alt="Read time" class="stories__card-meta-icon">
-                                    <span class="body-small">8mins</span>
+                                    <span class="body-small" data-i18n="stories.card4.readTime">8mins</span>
                                 </div>
                                 <div class="stories__card-meta-item">
                                     <img src="assets/icons/date-range.svg" alt="Date" class="stories__card-meta-icon">
-                                    <span class="body-small">13 Aug 2025</span>
+                                    <span class="body-small" data-i18n="stories.card4.date">13 Aug 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -1334,12 +1373,12 @@
             <div class="footer__divider"></div>
             <div class="footer__bottom">
                 <nav class="footer__links">
-                    <a href="https://example.com" class="footer__link">Privacy policy</a>
-                    <a href="https://example.com" class="footer__link">Terms & Conditions</a>
-                    <a href="https://example.com" class="footer__link">Legal notices</a>
-                    <a href="https://example.com" class="footer__link">Modern slavery statement</a>
+                    <a href="https://example.com" class="footer__link" data-i18n="footer.privacy">Privacy policy</a>
+                    <a href="https://example.com" class="footer__link" data-i18n="footer.terms">Terms & Conditions</a>
+                    <a href="https://example.com" class="footer__link" data-i18n="footer.legal">Legal notices</a>
+                    <a href="https://example.com" class="footer__link" data-i18n="footer.slavery">Modern slavery statement</a>
                 </nav>
-                <p class="footer__copyright">© 2025 Primeclass. All rights reserved.</p>
+                <p class="footer__copyright" data-i18n="footer.copyright">© 2025 Primeclass. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1472,6 +1511,253 @@
         // ============================================
         window.addEventListener('resize', updateProgress);
         window.addEventListener('load', updateProgress);
+        
+        // ============================================
+        // INTERNATIONALIZATION (i18n) SYSTEM
+        // ============================================
+
+        const translations = {
+            en: {
+                nav: {
+                    about: "About",
+                    values: "Values",
+                    benefits: "Benefits",
+                    stories: "Featured stories"
+                },
+                about: {
+                    title: "About",
+                    heading: "More Than Transit - A Moment in Itself",
+                    paragraph1: "We believe the airport should be more than a place of transit - it should be a moment in itself, a pause between destinations. Every traveler moves at a different rhythm, and we've designed our spaces to embrace them all. We embody a lifestyle-driven experience that transforms the journey into something memorable - turning waiting time into meaningful moments.",
+                    paragraph2: "Welcome to Primeclass. Your journey begins here."
+                },
+                values: {
+                    title: "Values",
+                    intro1: "We offer a seamless, thoughtfully curated experience that transforms airport travel from the ordinary into the extraordinary.",
+                    intro2: "Our premium experience design is built around lifestyle-driven choices, ensuring that every aspect of the traveler's journey is thoughtfully planned.",
+                    item1: {
+                        title: "Staying Tuned",
+                        description: "We believe staying contemporary is key to offering exceptional experiences. By embracing innovation, we keep pace with today's evolving traveler needs. We ensure that every journey is modern, efficient, and in tune with the latest trends."
+                    },
+                    item2: {
+                        title: "Collective Experience",
+                        description: "Primeclass is a vibrant hub where travelers of all backgrounds connect. We believe in creating spaces that foster social connection and a sense of belonging. Every touchpoint is designed to make you feel at home while offering a premium experience."
+                    },
+                    item3: {
+                        title: "Human Touch",
+                        description: "At Primeclass, we focus on meaningful human interactions. Genuine smiles, personalized service, and attentiveness make every moment special. We believe that these small touches create lasting connections that elevate the journey."
+                    },
+                    item4: {
+                        title: "Better Future",
+                        description: "We are committed to sustainability and innovation, aligning our services with forward-thinking solutions. By adopting eco-friendly practices, we shape a better future while continuing to offer exceptional experiences. We aim to minimize our environmental impact while staying ahead of industry trends."
+                    }
+                },
+                benefits: {
+                    title: "The Primeclass Experience",
+                    amenity1: "Lounge",
+                    amenity2: "Fast Track",
+                    amenity3: "Meet & Greet",
+                    amenity4: "Porter",
+                    amenity5: "Valet",
+                    amenity6: "Car Park"
+                },
+                stories: {
+                    title: "Featured stories",
+                    topic: "Topics",
+                    card1: {
+                        title: "More Than a Guest: The Personalized Care That Defines Primeclass.",
+                        readTime: "8mins",
+                        date: "13 Aug 2025"
+                    },
+                    card2: {
+                        title: "More Than a Guest: The Personalized Care That Defines Primeclass.",
+                        readTime: "8mins",
+                        date: "13 Aug 2025"
+                    },
+                    card3: {
+                        title: "More Than a Guest: The Personalized Care That Defines Primeclass.",
+                        readTime: "8mins",
+                        date: "13 Aug 2025"
+                    },
+                    card4: {
+                        title: "More Than a Guest: The Personalized Care That Defines Primeclass.",
+                        readTime: "8mins",
+                        date: "13 Aug 2025"
+                    }
+                },
+                footer: {
+                    privacy: "Privacy policy",
+                    terms: "Terms & Conditions",
+                    legal: "Legal notices",
+                    slavery: "Modern slavery statement",
+                    copyright: "© 2025 Primeclass. All rights reserved."
+                }
+            },
+            tr: {
+                nav: {
+                    about: "Hakkımızda",
+                    values: "Değerlerimiz",
+                    benefits: "Avantajlar",
+                    stories: "Öne Çıkan Hikayeler"
+                },
+                about: {
+                    title: "Hakkımızda",
+                    heading: "Geçişten Fazlası - Kendinde Bir An",
+                    paragraph1: "Havalimanının sadece bir transit noktası olmanın ötesinde - kendi içinde bir an, destinasyonlar arasında bir mola olması gerektiğine inanıyoruz. Her yolcu farklı bir ritimde hareket eder ve alanlarımızı hepsini kucaklayacak şekilde tasarladık. Yolculuğu unutulmaz bir şeye dönüştüren yaşam tarzı odaklı bir deneyimi somutlaştırıyoruz - bekleme süresini anlamlı anlara dönüştürüyoruz.",
+                    paragraph2: "Primeclass'a hoş geldiniz. Yolculuğunuz burada başlıyor."
+                },
+                values: {
+                    title: "Değerlerimiz",
+                    intro1: "Havalimanı seyahatini sıradanlıktan olağanüstülüğe dönüştüren kusursuz, özenle hazırlanmış bir deneyim sunuyoruz.",
+                    intro2: "Premium deneyim tasarımımız, yaşam tarzı odaklı seçimler etrafında inşa edilmiş olup, yolcunun yolculuğunun her yönünün özenle planlanmasını sağlar.",
+                    item1: {
+                        title: "Güncel Kalmak",
+                        description: "Çağdaş kalmayı olağanüstü deneyimler sunmanın anahtarı olarak görüyoruz. İnovasyonu benimseyerek, günümüzün gelişen yolcu ihtiyaçlarıyla uyumlu hareket ediyoruz. Her yolculuğun modern, verimli ve en son trendlerle uyumlu olmasını sağlıyoruz."
+                    },
+                    item2: {
+                        title: "Kolektif Deneyim",
+                        description: "Primeclass, her geçmişten yolcuların bağlantı kurduğu canlı bir merkez. Sosyal bağlantıyı ve aidiyet duygusunu teşvik eden alanlar yaratmaya inanıyoruz. Her temas noktası, premium bir deneyim sunarken kendinizi evinizde hissetmenizi sağlamak için tasarlandı."
+                    },
+                    item3: {
+                        title: "İnsan Dokunuşu",
+                        description: "Primeclass'ta, anlamlı insan etkileşimlerine odaklanıyoruz. Samimi gülümsemeler, kişiselleştirilmiş hizmet ve özen her anı özel kılar. Bu küçük dokunuşların yolculuğu yükselten kalıcı bağlantılar oluşturduğuna inanıyoruz."
+                    },
+                    item4: {
+                        title: "Daha İyi Bir Gelecek",
+                        description: "Sürdürülebilirlik ve inovasyona bağlıyız, hizmetlerimizi ileriye dönük çözümlerle uyumlu hale getiriyoruz. Çevre dostu uygulamaları benimseyerek, olağanüstü deneyimler sunmaya devam ederken daha iyi bir gelecek şekillendiriyoruz. Çevresel etkimizi en aza indirmeyi ve sektör trendlerinin önünde kalmayı amaçlıyoruz."
+                    }
+                },
+                benefits: {
+                    title: "Primeclass Deneyimi",
+                    amenity1: "Lounge",
+                    amenity2: "Hızlı Geçiş",
+                    amenity3: "Karşılama ve Uğurlama",
+                    amenity4: "Hamal",
+                    amenity5: "Vale",
+                    amenity6: "Otopark"
+                },
+                stories: {
+                    title: "Öne Çıkan Hikayeler",
+                    topic: "Konular",
+                    card1: {
+                        title: "Bir Misafirden Fazlası: Primeclass'ı Tanımlayan Kişiselleştirilmiş Hizmet.",
+                        readTime: "8 dakika",
+                        date: "13 Ağustos 2025"
+                    },
+                    card2: {
+                        title: "Bir Misafirden Fazlası: Primeclass'ı Tanımlayan Kişiselleştirilmiş Hizmet.",
+                        readTime: "8 dakika",
+                        date: "13 Ağustos 2025"
+                    },
+                    card3: {
+                        title: "Bir Misafirden Fazlası: Primeclass'ı Tanımlayan Kişiselleştirilmiş Hizmet.",
+                        readTime: "8 dakika",
+                        date: "13 Ağustos 2025"
+                    },
+                    card4: {
+                        title: "Bir Misafirden Fazlası: Primeclass'ı Tanımlayan Kişiselleştirilmiş Hizmet.",
+                        readTime: "8 dakika",
+                        date: "13 Ağustos 2025"
+                    }
+                },
+                footer: {
+                    privacy: "Gizlilik politikası",
+                    terms: "Şartlar ve Koşullar",
+                    legal: "Yasal bildirimler",
+                    slavery: "Modern kölelik beyanı",
+                    copyright: "© 2025 Primeclass. Tüm hakları saklıdır."
+                }
+            }
+        };
+
+        // Language manager
+        class LanguageManager {
+            constructor() {
+                this.currentLang = this.detectLanguage();
+                this.init();
+            }
+
+            detectLanguage() {
+                // Check if user has previously selected a language
+                const savedLang = localStorage.getItem('primeclass-lang');
+                if (savedLang && (savedLang === 'en' || savedLang === 'tr')) {
+                    return savedLang;
+                }
+
+                // Detect browser language
+                const browserLang = navigator.language || navigator.userLanguage;
+                
+                // If browser language is Turkish (tr or tr-TR), use Turkish
+                if (browserLang.toLowerCase().startsWith('tr')) {
+                    return 'tr';
+                }
+
+                // Default to English
+                return 'en';
+            }
+
+            init() {
+                // Apply initial language
+                this.applyTranslations();
+                this.updateLanguageSwitcher();
+
+                // Add event listener to language switcher
+                const langSwitcher = document.getElementById('langSwitcher');
+                if (langSwitcher) {
+                    langSwitcher.addEventListener('click', () => this.toggleLanguage());
+                }
+            }
+
+            toggleLanguage() {
+                this.currentLang = this.currentLang === 'en' ? 'tr' : 'en';
+                localStorage.setItem('primeclass-lang', this.currentLang);
+                this.applyTranslations();
+                this.updateLanguageSwitcher();
+                
+                // Update HTML lang attribute
+                const htmlRoot = document.getElementById('html-root') || document.documentElement;
+                htmlRoot.lang = this.currentLang;
+            }
+
+            updateLanguageSwitcher() {
+                const langText = document.getElementById('langSwitcherText');
+                if (langText) {
+                    langText.textContent = this.currentLang === 'en' ? 'EN' : 'TR';
+                }
+            }
+
+            applyTranslations() {
+                const elements = document.querySelectorAll('[data-i18n]');
+                
+                elements.forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    const translation = this.getTranslation(key);
+                    
+                    if (translation) {
+                        element.textContent = translation;
+                    }
+                });
+            }
+
+            getTranslation(key) {
+                const keys = key.split('.');
+                let translation = translations[this.currentLang];
+                
+                for (const k of keys) {
+                    if (translation && translation[k]) {
+                        translation = translation[k];
+                    } else {
+                        console.warn(`Translation not found for key: ${key}`);
+                        return null;
+                    }
+                }
+                
+                return translation;
+            }
+        }
+
+        // Initialize language manager when DOM is ready
+        window.languageManager = new LanguageManager();
     </script>
+    
 </body>
 </html>
