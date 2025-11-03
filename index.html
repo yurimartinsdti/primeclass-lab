@@ -1677,13 +1677,7 @@
             }
 
             detectLanguage() {
-                // Check if user has previously selected a language
-                const savedLang = localStorage.getItem('primeclass-lang');
-                if (savedLang && (savedLang === 'en' || savedLang === 'tr')) {
-                    return savedLang;
-                }
-
-                // Detect browser language
+                // Detect browser language first
                 const browserLang = navigator.language || navigator.userLanguage;
                 
                 // If browser language is Turkish (tr or tr-TR), use Turkish
@@ -1691,7 +1685,7 @@
                     return 'tr';
                 }
 
-                // Default to English
+                // Default to English for all other languages
                 return 'en';
             }
 
@@ -1709,7 +1703,7 @@
 
             toggleLanguage() {
                 this.currentLang = this.currentLang === 'en' ? 'tr' : 'en';
-                localStorage.setItem('primeclass-lang', this.currentLang);
+                // Removed localStorage saving - always detect from browser
                 this.applyTranslations();
                 this.updateLanguageSwitcher();
                 
