@@ -1365,8 +1365,9 @@
             <div class="footer__divider"></div>
             <div class="footer__bottom">
                 <nav class="footer__links">
-                    <a href="https://example.com" class="footer__link" data-i18n="footer.privacy">Privacy Policy</a>
-                    <a href="https://example.com" class="footer__link" data-i18n="footer.cookie">Cookie Policy</a>
+                    <a href="#" class="footer__link" id="privacyPolicyLink" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" class="footer__link" id="cookiePolicyLink" data-i18n="footer.cookie">Cookie Policy</a>
+                    <a href="#" class="footer__link" id="dataSubjectFormLink" data-i18n="footer.dataForm">Data Subject Application Form</a>
                 </nav>
                 <p class="footer__copyright" data-i18n="footer.copyright">© 2025 Primeclass. All rights reserved.</p>
             </div>
@@ -1577,6 +1578,7 @@
                 footer: {
                     privacy: "Privacy Policy",
                     cookie: "Cookie Policy",
+                    dataForm: "Data Subject Application Form",
                     copyright: "© 2025 Primeclass. All rights reserved."
                 }
             },
@@ -1650,6 +1652,7 @@
                 footer: {
                     privacy: "Gizlilik Politikası",
                     cookie: "Çerez Politikası",
+                    dataForm: "Veri Sahibi Başvuru Formu",
                     copyright: "© 2025 Primeclass. Tüm hakları saklıdır."
                 }
             }
@@ -1679,6 +1682,7 @@
                 // Apply initial language
                 this.applyTranslations();
                 this.updateLanguageSwitcher();
+                this.updateDocumentLinks();
 
                 // Add event listener to language switcher
                 const langSwitcher = document.getElementById('langSwitcher');
@@ -1692,6 +1696,7 @@
                 // Removed localStorage saving - always detect from browser
                 this.applyTranslations();
                 this.updateLanguageSwitcher();
+                this.updateDocumentLinks();
                 
                 // Update HTML lang attribute
                 const htmlRoot = document.getElementById('html-root') || document.documentElement;
@@ -1702,6 +1707,29 @@
                 const langText = document.getElementById('langSwitcherText');
                 if (langText) {
                     langText.textContent = this.currentLang === 'en' ? 'EN' : 'TR';
+                }
+            }
+
+            updateDocumentLinks() {
+                const langCode = this.currentLang === 'en' ? 'EN' : 'TR';
+                
+                const privacyLink = document.getElementById('privacyPolicyLink');
+                const cookieLink = document.getElementById('cookiePolicyLink');
+                const dataFormLink = document.getElementById('dataSubjectFormLink');
+                
+                if (privacyLink) {
+                    privacyLink.href = `assets/docs/privacy-policy-${langCode}.pdf`;
+                    privacyLink.download = `privacy-policy-${langCode}.pdf`;
+                }
+                
+                if (cookieLink) {
+                    cookieLink.href = `assets/docs/cookie-policy-${langCode}.pdf`;
+                    cookieLink.download = `cookie-policy-${langCode}.pdf`;
+                }
+                
+                if (dataFormLink) {
+                    dataFormLink.href = `assets/docs/data-subject-application-form-${langCode}.pdf`;
+                    dataFormLink.download = `data-subject-application-form-${langCode}.pdf`;
                 }
             }
 
