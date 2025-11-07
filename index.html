@@ -1121,7 +1121,7 @@
                         <img src="assets/images/values-image.png" alt="Our Values" class="values__image">
                     </div>
                     <div class="values__list">
-                    <div class="values__item expanded" data-value-image="assets/images/values-image.png">
+                    <div class="values__item" data-value-image="assets/images/Staying-tuned-zen-seat_generated-AI.png">
                             <div class="values__item-header">
                                 <h3 class="headline-h5 values__item-title" data-i18n="values.item1.title">Staying Tuned</h3>
                                 <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
@@ -1130,12 +1130,12 @@
                                                                 <p class="body-large values__item-text" data-i18n="values.item1.description">We believe staying contemporary is key to offering exceptional experiences. By embracing innovation, we keep pace with today's evolving traveler needs. We ensure that every journey is modern, efficient, and in tune with the latest trends.</p>
                             </div>
                             <div class="values__item-image">
-                                <img src="assets/images/values-image.png" alt="Staying Tuned">
+                                <img src="assets/images/Staying-tuned-zen-seat_generated-AI.png" alt="Staying Tuned">
                             </div>
                     </div>
                     <div class="values__divider"></div>
                     
-                    <div class="values__item" data-value-image="assets/images/values-image.png">
+                    <div class="values__item" data-value-image="assets/images/collective-experience-cocktail-restaurant_generated-AI.png">
                             <div class="values__item-header">
                                 <h3 class="headline-h5 values__item-title" data-i18n="values.item2.title">Collective Experience</h3>
                                 <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
@@ -1144,12 +1144,12 @@
                                 <p class="body-large values__item-text" data-i18n="values.item2.description">Primeclass is a vibrant hub where travelers of all backgrounds connect. We believe in creating spaces that foster social connection and a sense of belonging. Every touchpoint is designed to make you feel at home while offering a premium experience.</p>
                             </div>
                             <div class="values__item-image">
-                                <img src="assets/images/values-image.png" alt="Collective Experience">
+                                <img src="assets/images/collective-experience-cocktail-restaurant_generated-AI.png" alt="Collective Experience">
                             </div>
                     </div>
                     <div class="values__divider"></div>
-                    
-                    <div class="values__item" data-value-image="assets/images/values-image.png">
+
+                    <div class="values__item" data-value-image="assets/images/human-touch-smiling-woman-orange_generated-AI.png">
                             <div class="values__item-header">
                                 <h3 class="headline-h5 values__item-title" data-i18n="values.item3.title">Human Touch</h3>
                                 <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
@@ -1158,12 +1158,12 @@
                                 <p class="body-large values__item-text" data-i18n="values.item3.description">At Primeclass, we focus on meaningful human interactions. Genuine smiles, personalized service, and attentiveness make every moment special. We believe that these small touches create lasting connections that elevate the journey.</p>
                             </div>
                             <div class="values__item-image">
-                                <img src="assets/images/values-image.png" alt="Human Touch">
+                                <img src="assets/images/human-touch-smiling-woman-orange_generated-AI.png" alt="Human Touch">
                             </div>
                     </div>
                     <div class="values__divider"></div>
-                    
-                    <div class="values__item" data-value-image="assets/images/values-image.png">
+
+                    <div class="values__item" data-value-image="assets/images/better-future-amber-martin-9pvTSsNV2T4-unsplash.png">
                             <div class="values__item-header">
                                 <h3 class="headline-h5 values__item-title" data-i18n="values.item4.title">Better Future</h3>
                                 <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
@@ -1172,7 +1172,7 @@
                                 <p class="body-large values__item-text" data-i18n="values.item4.description">We are committed to sustainability and innovation, aligning our services with forward-thinking solutions. By adopting eco-friendly practices, we shape a better future while continuing to offer exceptional experiences. We aim to minimize our environmental impact while staying ahead of industry trends.</p>
                             </div>
                             <div class="values__item-image">
-                                <img src="assets/images/values-image.png" alt="Better Future">
+                                <img src="assets/images/better-future-amber-martin-9pvTSsNV2T4-unsplash.png" alt="Better Future">
                             </div>
                     </div>
                     </div>
@@ -1425,6 +1425,7 @@
         // ============================================
         const valuesItems = document.querySelectorAll('.values__item');
         const valuesImage = document.querySelector('.values__image');
+        const defaultImageSrc = 'assets/images/values-image.png';
         
         valuesItems.forEach(item => {
             item.querySelector('.values__item-header').addEventListener('click', () => {
@@ -1433,6 +1434,11 @@
                 if (isExpanded) {
                     // Close the currently expanded item
                     item.classList.remove('expanded');
+                    
+                    // Reset to default image when all items are closed
+                    if (valuesImage) {
+                        valuesImage.src = defaultImageSrc;
+                    }
                 } else {
                     // Close all other items
                     valuesItems.forEach(otherItem => {
