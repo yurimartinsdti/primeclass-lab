@@ -1,0 +1,66 @@
+/* ============================================
+   HEADER COMPONENT
+   ============================================ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-terracotta-600);
+    padding: var(--spacing-2) var(--spacing-5);
+    z-index: 1000;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1360px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.header__logo {
+    width: 118px;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.header__logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Language Switcher */
+.lang-switcher {
+    background-color: var(--color-terracotta-600);
+    border: 1px solid var(--color-neutral-white);
+    border-radius: 20px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    right: 0;
+}
+
+.lang-switcher:hover {
+    background-color: var(--color-neutral-white);
+    border-color: var(--color-neutral-white);
+}
+
+.lang-switcher__text {
+    color: var(--color-neutral-white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color var(--transition-fast);
+}
+
+.lang-switcher:hover .lang-switcher__text {
+    color: var(--color-terracotta-600);
+}

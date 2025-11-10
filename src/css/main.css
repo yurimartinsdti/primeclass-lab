@@ -1,0 +1,24 @@
+/* ============================================
+   PRIMECLASS MAIN STYLESHEET
+   ============================================ */
+
+/* Import CSS Variables */
+@import url('./variables.css');
+
+/* Import Base Styles */
+@import url('./base.css');
+
+/* Import Typography */
+@import url('./typography.css');
+
+/* Import Layout Components */
+@import url('./layout.css');
+
+/* Import Header Component */
+@import url('./header.css');
+
+/* Import Page Components */
+@import url('./components.css');
+
+/* Import Responsive Styles */
+@import url('./responsive.css');

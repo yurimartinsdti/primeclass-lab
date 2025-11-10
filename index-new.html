@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Primeclass - Premium airport lounge experience across 19 countries with personalized services and authentic hospitality.">
+    <title>Primeclass</title>
+    
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="header__nav">
+            <a href="#" class="header__logo" aria-label="Primeclass">
+                <img src="assets/icons/logo.svg" alt="Primeclass" class="header__logo-img">
+            </a>
+            <button class="lang-switcher" id="langSwitcher" aria-label="Switch language">
+                <span class="lang-switcher__text" id="langSwitcherText">EN</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero" id="hero">
+        <div class="hero__image-container">
+            <img src="assets/images/hero-background.jpg" alt="" class="hero__image">
+        </div>
+    </section>
+
+    <!-- Tab Navigation -->
+    <nav class="tab-nav" id="tabNav">
+        <div class="tab-nav__container">
+            <button class="tab-nav__item body-default active" data-target="about" data-i18n="nav.about">About</button>
+            <button class="tab-nav__item body-default" data-target="values" data-i18n="nav.values">Values</button>
+            <button class="tab-nav__item body-default" data-target="benefits" data-i18n="nav.benefits">Benefits</button>
+            <button class="tab-nav__item body-default" data-target="stories" data-i18n="nav.stories">Featured stories</button>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about__content">
+            <h2 class="headline-h3 about__title" data-i18n="about.title">About</h2>
+            <div class="about__text-container">
+                <h3 class="headline-h4" data-i18n="about.heading">More Than Transit - A Moment in Itself</h3>
+                <p class="body-default" data-i18n="about.paragraph1">We believe the airport should be more than a place of transit - it should be a moment in itself, a pause between destinations. Every traveler moves at a different rhythm, and we've designed our spaces to embrace them all. We embody a lifestyle-driven experience that transforms the journey into something memorable - turning waiting time into meaningful moments.</p>
+                <p class="body-default" data-i18n="about.paragraph2">Welcome to Primeclass. Your journey begins here.</p>
+            </div>
+        </div>
+        <div class="about__image-wrapper">
+            <div class="about__image-container">
+                <img src="assets/images/about-image-new.png" alt="" class="about__image" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values" id="values">
+        <div class="values__container">
+            <div class="values__header">
+                <h2 class="headline-h3 values__title" data-i18n="values.title">Values</h2>
+                <p class="values__intro body-large" data-i18n="values.intro1">We offer a seamless, thoughtfully curated experience that transforms airport travel from the ordinary into the extraordinary.</p>
+                <p class="values__intro body-large" data-i18n="values.intro2">Our premium experience design is built around lifestyle-driven choices, ensuring that every aspect of the traveler's journey is thoughtfully planned.</p>
+            </div>
+            <div class="values__details">
+                <div class="values__details-container">
+                    <div class="values__image-wrapper">
+                        <img src="assets/images/values-image.png" alt="Our Values" class="values__image" loading="lazy">
+                    </div>
+                    <div class="values__list">
+                        <div class="values__item" data-value-image="assets/images/Staying-tuned-zen-seat_generated-AI.png">
+                            <div class="values__item-header">
+                                <h3 class="headline-h5 values__item-title" data-i18n="values.item1.title">Staying Tuned</h3>
+                                <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
+                            </div>
+                            <div class="values__item-description">
+                                <p class="body-large values__item-text" data-i18n="values.item1.description">We believe staying contemporary is key to offering exceptional experiences. By embracing innovation, we keep pace with today's evolving traveler needs. We ensure that every journey is modern, efficient, and in tune with the latest trends.</p>
+                            </div>
+                            <div class="values__item-image">
+                                <img src="assets/images/Staying-tuned-zen-seat_generated-AI.png" alt="Staying Tuned" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="values__divider"></div>
+                        
+                        <div class="values__item" data-value-image="assets/images/collective-experience-cocktail-restaurant_generated-AI.png">
+                            <div class="values__item-header">
+                                <h3 class="headline-h5 values__item-title" data-i18n="values.item2.title">Collective Experience</h3>
+                                <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
+                            </div>
+                            <div class="values__item-description">
+                                <p class="body-large values__item-text" data-i18n="values.item2.description">Primeclass is a vibrant hub where travelers of all backgrounds connect. We believe in creating spaces that foster social connection and a sense of belonging. Every touchpoint is designed to make you feel at home while offering a premium experience.</p>
+                            </div>
+                            <div class="values__item-image">
+                                <img src="assets/images/collective-experience-cocktail-restaurant_generated-AI.png" alt="Collective Experience" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="values__divider"></div>
+                        
+                        <div class="values__item" data-value-image="assets/images/human-touch-smiling-woman-orange_generated-AI.png">
+                            <div class="values__item-header">
+                                <h3 class="headline-h5 values__item-title" data-i18n="values.item3.title">Human Touch</h3>
+                                <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
+                            </div>
+                            <div class="values__item-description">
+                                <p class="body-large values__item-text" data-i18n="values.item3.description">At Primeclass, we focus on meaningful human interactions. Genuine smiles, personalized service, and attentiveness make every moment special. We believe that these small touches create lasting connections that elevate the journey.</p>
+                            </div>
+                            <div class="values__item-image">
+                                <img src="assets/images/human-touch-smiling-woman-orange_generated-AI.png" alt="Human Touch" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="values__divider"></div>
+                        
+                        <div class="values__item" data-value-image="assets/images/better-future-amber-martin-9pvTSsNV2T4-unsplash.png">
+                            <div class="values__item-header">
+                                <h3 class="headline-h5 values__item-title" data-i18n="values.item4.title">Better Future</h3>
+                                <img src="assets/icons/plus-icon.svg" alt="Toggle" class="values__item-icon">
+                            </div>
+                            <div class="values__item-description">
+                                <p class="body-large values__item-text" data-i18n="values.item4.description">We are committed to sustainability and innovation, aligning our services with forward-thinking solutions. By adopting eco-friendly practices, we shape a better future while continuing to offer exceptional experiences. We aim to minimize our environmental impact while staying ahead of industry trends.</p>
+                            </div>
+                            <div class="values__item-image">
+                                <img src="assets/images/better-future-amber-martin-9pvTSsNV2T4-unsplash.png" alt="Better Future" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="benefits__container">
+            <h2 class="headline-h3 benefits__title" data-i18n="benefits.title">The Primeclass Experience</h2>
+            <div class="benefits__amenities-list">
+                <div class="benefits__amenity-item">
+                    <div class="benefits__amenity-icon-wrapper">
+                        <img src="assets/icons/amenity-lounge.svg" alt="Lounge" class="benefits__amenity-icon">
+                    </div>
+                    <p class="benefits__amenity-text" data-i18n="benefits.amenity1">Lounge</p>
+                </div>
+                <div class="benefits__amenity-item">
+                    <div class="benefits__amenity-icon-wrapper">
+                        <img src="assets/icons/amenity-fast-track.svg" alt="Fast Track" class="benefits__amenity-icon">
+                    </div>
+                    <p class="benefits__amenity-text" data-i18n="benefits.amenity2">Fast Track</p>
+                </div>
+                <div class="benefits__amenity-item">
+                    <div class="benefits__amenity-icon-wrapper">
+                        <img src="assets/icons/amenity-meet-greet.svg" alt="Meet & Greet" class="benefits__amenity-icon">
+                    </div>
+                    <p class="benefits__amenity-text" data-i18n="benefits.amenity3">Meet & Greet</p>
+                </div>
+                <div class="benefits__amenity-item">
+                    <div class="benefits__amenity-icon-wrapper">
+                        <img src="assets/icons/amenity-porter.svg" alt="Porter" class="benefits__amenity-icon">
+                    </div>
+                    <p class="benefits__amenity-text" data-i18n="benefits.amenity4">Porter</p>
+                </div>
+                <div class="benefits__amenity-item">
+                    <div class="benefits__amenity-icon-wrapper">
+                        <img src="assets/icons/amenity-valet.svg" alt="Valet" class="benefits__amenity-icon">
+                    </div>
+                    <p class="benefits__amenity-text" data-i18n="benefits.amenity5">Valet</p>
+                </div>
+                <div class="benefits__amenity-item">
+                    <div class="benefits__amenity-icon-wrapper">
+                        <img src="assets/icons/amenity-car-park.svg" alt="Car Park" class="benefits__amenity-icon">
+                    </div>
+                    <p class="benefits__amenity-text" data-i18n="benefits.amenity6">Car Park</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Stories Section -->
+    <section class="stories" id="stories">
+        <div class="stories__header">
+            <h2 class="headline-h3 stories__title" data-i18n="stories.title">Featured stories</h2>
+            <div class="stories__nav">
+                <button class="stories__nav-button stories__nav-button--prev" id="storiesPrev">
+                    <img src="assets/icons/arrow-forward.svg" alt="Previous" class="stories__nav-icon">
+                </button>
+                <button class="stories__nav-button stories__nav-button--next" id="storiesNext">
+                    <img src="assets/icons/arrow-forward.svg" alt="Next" class="stories__nav-icon">
+                </button>
+            </div>
+        </div>
+        <div class="stories__carousel-wrapper">
+            <div class="stories__carousel" id="storiesCarousel">
+                <article class="stories__card">
+                    <a href="https://example.com/story1" target="_blank" rel="noopener noreferrer" style="display:block; color:inherit; text-decoration:none;">
+                        <div class="stories__card-image-wrapper">
+                            <img src="assets/images/story-card-1.png" alt="Story" class="stories__card-image" loading="lazy">
+                        </div>
+                        <div class="stories__card-content">
+                            <div class="stories__card-text">
+                                <p class="headline-h6 stories__card-topic" data-i18n="stories.topic">Topics</p>
+                                <h3 class="title-small stories__card-title" data-i18n="stories.card1.title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
+                            </div>
+                            <div class="stories__card-meta">
+                                <div class="stories__card-meta-item">
+                                    <img src="assets/icons/acute.svg" alt="Read time" class="stories__card-meta-icon">
+                                    <span class="body-small" data-i18n="stories.card1.readTime">8mins</span>
+                                </div>
+                                <div class="stories__card-meta-item">
+                                    <img src="assets/icons/date-range.svg" alt="Date" class="stories__card-meta-icon">
+                                    <span class="body-small" data-i18n="stories.card1.date">13 Aug 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="stories__card">
+                    <a href="https://example.com/story2" target="_blank" rel="noopener noreferrer" style="display:block; color:inherit; text-decoration:none;">
+                        <div class="stories__card-image-wrapper">
+                            <img src="assets/images/story-card-2.png" alt="Story" class="stories__card-image" loading="lazy">
+                        </div>
+                        <div class="stories__card-content">
+                            <div class="stories__card-text">
+                                <p class="headline-h6 stories__card-topic" data-i18n="stories.topic">Topics</p>
+                                <h3 class="title-small stories__card-title" data-i18n="stories.card2.title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
+                            </div>
+                            <div class="stories__card-meta">
+                                <div class="stories__card-meta-item">
+                                    <img src="assets/icons/acute.svg" alt="Read time" class="stories__card-meta-icon">
+                                    <span class="body-small" data-i18n="stories.card2.readTime">8mins</span>
+                                </div>
+                                <div class="stories__card-meta-item">
+                                    <img src="assets/icons/date-range.svg" alt="Date" class="stories__card-meta-icon">
+                                    <span class="body-small" data-i18n="stories.card2.date">13 Aug 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="stories__card">
+                    <a href="https://example.com/story3" target="_blank" rel="noopener noreferrer" style="display:block; color:inherit; text-decoration:none;">
+                        <div class="stories__card-image-wrapper">
+                            <img src="assets/images/story-card-3.png" alt="Story" class="stories__card-image" loading="lazy">
+                        </div>
+                        <div class="stories__card-content">
+                            <div class="stories__card-text">
+                                <p class="headline-h6 stories__card-topic" data-i18n="stories.topic">Topics</p>
+                                <h3 class="title-small stories__card-title" data-i18n="stories.card3.title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
+                            </div>
+                            <div class="stories__card-meta">
+                                <div class="stories__card-meta-item">
+                                    <img src="assets/icons/acute.svg" alt="Read time" class="stories__card-meta-icon">
+                                    <span class="body-small" data-i18n="stories.card3.readTime">8mins</span>
+                                </div>
+                                <div class="stories__card-meta-item">
+                                    <img src="assets/icons/date-range.svg" alt="Date" class="stories__card-meta-icon">
+                                    <span class="body-small" data-i18n="stories.card3.date">13 Aug 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                <article class="stories__card">
+                    <a href="https://example.com/story4" target="_blank" rel="noopener noreferrer" style="display:block; color:inherit; text-decoration:none;">
+                        <div class="stories__card-image-wrapper">
+                            <img src="assets/images/story-card-4.png" alt="Story" class="stories__card-image" loading="lazy">
+                        </div>
+                        <div class="stories__card-content">
+                            <div class="stories__card-text">
+                                <p class="headline-h6 stories__card-topic" data-i18n="stories.topic">Topics</p>
+                                <h3 class="title-small stories__card-title" data-i18n="stories.card4.title">More Than a Guest: The Personalized Care That Defines Primeclass.</h3>
+                            </div>
+                            <div class="stories__card-meta">
+                                <div class="stories__card-meta-item">
+                                    <img src="assets/icons/acute.svg" alt="Read time" class="stories__card-meta-icon">
+                                    <span class="body-small" data-i18n="stories.card4.readTime">8mins</span>
+                                </div>
+                                <div class="stories__card-meta-item">
+                                    <img src="assets/icons/date-range.svg" alt="Date" class="stories__card-meta-icon">
+                                    <span class="body-small" data-i18n="stories.card4.date">13 Aug 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+        <div class="stories__indicator">
+            <div class="stories__indicator-track">
+                <div class="stories__indicator-progress" id="storiesProgress"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer__content">
+            <div class="footer__top">
+                <div class="footer__logo" aria-label="Primeclass">
+                    <img src="assets/icons/logo.svg" alt="Primeclass" class="footer__logo-img">
+                </div>
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/primeclassofficial" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/icons/social-instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/company/primeclassofficial" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/icons/social-linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.youtube.com/@primeclassofficial" class="footer__social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/icons/social-youtube.svg" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__divider"></div>
+            <div class="footer__bottom">
+                <nav class="footer__links">
+                    <a href="#" class="footer__link" id="privacyPolicyLink" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" class="footer__link" id="cookiePolicyLink" data-i18n="footer.cookie">Cookie Policy</a>
+                    <a href="#" class="footer__link" id="dataSubjectFormLink" data-i18n="footer.dataForm">Data Subject Application Form</a>
+                </nav>
+                <p class="footer__copyright" data-i18n="footer.copyright">© 2025 Primeclass. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="src/data/translations.js"></script>
+    <script src="src/js/navigation.js"></script>
+    <script src="src/js/accordion.js"></script>
+    <script src="src/js/language.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>

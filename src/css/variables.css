@@ -1,0 +1,37 @@
+/* ============================================
+   CSS VARIABLES - Design Tokens from Figma
+   ============================================ */
+:root {
+    /* Spacing */
+    --spacing-05: 4px;
+    --spacing-1: 8px;
+    --spacing-2: 16px;
+    --spacing-2-05: 20px;
+    --spacing-3: 24px;
+    --spacing-4: 32px;
+    --spacing-5: 40px;
+    --spacing-5-5: 44px;
+    --spacing-6: 48px;
+    --spacing-7: 56px;
+    --spacing-10: 80px;
+    --spacing-12-5: 100px;
+    
+    /* Colors */
+    --color-terracotta-600: #c33c1d;
+    --color-warm-grey-100: #e9e8e1;
+    --color-neutral-white: #ffffff;
+    --color-neutral-black: #1a1a1a;
+    --color-border-secondary: #e2e0d8;
+    --color-border-tertiary: #e09282;
+    
+    /* Typography */
+    --font-headline: 'Delmon Delicate', 'Playfair Display', serif;
+    --font-body: 'Noto Sans', sans-serif;
+    
+    /* Border Radius */
+    --radius-small: 2px;
+    
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-smooth: 0.4s ease;
+}

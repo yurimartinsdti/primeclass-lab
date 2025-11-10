@@ -1,0 +1,57 @@
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+.headline-h3, .headline-h4, .headline-h5, .headline-h6, .button-text {
+    font-family: var(--font-headline);
+    font-weight: 400;
+}
+
+.headline-h3 {
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+}
+
+.headline-h4 {
+    font-size: 39px;
+    line-height: 1.2;
+    letter-spacing: 0.78px;
+}
+
+.headline-h5 {
+    font-size: 84px;
+    line-height: 1.1;
+    letter-spacing: 1.68px;
+}
+
+.headline-h6 {
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.body-large {
+    font-size: 16px;
+}
+
+.body-default {
+    font-size: 16px;
+}
+
+.body-small {
+    font-size: 16px;
+}
+
+.title-small {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.button-text {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}

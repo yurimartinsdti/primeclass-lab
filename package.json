@@ -1,0 +1,29 @@
+{
+  "name": "primeclass-website",
+  "version": "1.0.0",
+  "description": "Premium airport lounge experience website",
+  "main": "index-new.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "start": "python3 -m http.server 8080",
+    "build": "echo 'Build process not configured yet'",
+    "lint": "echo 'Linting not configured yet'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yurimartinsdti/primeclass-lab.git"
+  },
+  "keywords": [
+    "primeclass",
+    "airport",
+    "lounge", 
+    "premium",
+    "travel",
+    "responsive",
+    "website"
+  ],
+  "author": "Primeclass",
+  "license": "Proprietary",
+  "devDependencies": {},
+  "dependencies": {}
+}
