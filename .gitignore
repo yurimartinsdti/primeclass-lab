@@ -1,0 +1,21 @@
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Node dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+.env.*
+
+# Editor settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Thumbnails / OS cruft
+Thumbs.db
