@@ -47,26 +47,21 @@ const translations = {
         },
         stories: {
             title: "Featured stories",
-            topic: "Topics",
+            topic: "News",
             card1: {
-                title: "More Than a Guest: The Personalized Care That Defines Primeclass.",
-                readTime: "8mins",
-                date: "13 Aug 2025"
+                title: "TAV Operation Services Unveils Lifestyle-Led Primeclass Concept Redefining Airport Hospitality",
+                date: "November 4, 2025",
+                url: "https://tavoperationservices.com/en-EN/press-room/tavos-unveils-lifestyle-led-primeclass-concept-redefining-airport-hospitality"
             },
             card2: {
-                title: "More Than a Guest: The Personalized Care That Defines Primeclass.",
-                readTime: "8mins",
-                date: "13 Aug 2025"
+                title: "Award Nomination Category: Hospitality Excellence Award",
+                date: "July 22, 2025",
+                url: "https://tavoperationservices.com/en-EN/press-room/award-nomination-category-hospitality-excellence-award"
             },
             card3: {
-                title: "More Than a Guest: The Personalized Care That Defines Primeclass.",
-                readTime: "8mins",
-                date: "13 Aug 2025"
-            },
-            card4: {
-                title: "More Than a Guest: The Personalized Care That Defines Primeclass.",
-                readTime: "8mins",
-                date: "13 Aug 2025"
+                title: "TAV Operation Services and SOF Connect signed a contract for the building and management of new business lounges at Sofia Airport",
+                date: "April 22, 2025",
+                url: "https://tavoperationservices.com/en-EN/press-room/tav-os-and-sof-connect-signed-contract-for-new-business-lounges-in-sofia"
             }
         },
         footer: {
@@ -121,26 +116,21 @@ const translations = {
         },
         stories: {
             title: "Öne Çıkan Hikayeler",
-            topic: "Konular",
+            topic: "Haberler",
             card1: {
-                title: "Bir Misafirden Fazlası: Primeclass'ı Tanımlayan Kişiselleştirilmiş Hizmet.",
-                readTime: "8 dakika",
-                date: "13 Ağustos 2025"
+                title: "Primeclass yenilenen yüzüyle havalimanı seyahat deneyimini baştan tanımlıyor",
+                date: "12 Kasım 2025",
+                url: "https://tavoperationservices.com/tr-TR/basin-odasi/primeclass-yenilenen-yuzuyle-havalimani-seyahat-deneyimini-bastan-tanimliyor"
             },
             card2: {
-                title: "Bir Misafirden Fazlası: Primeclass'ı Tanımlayan Kişiselleştirilmiş Hizmet.",
-                readTime: "8 dakika", 
-                date: "13 Ağustos 2025"
+                title: "Primeclass, Oman Leadership Awards 2025'te Üç Ödül Birden Kazandı",
+                date: "25 Ağustos 2025",
+                url: "https://tavoperationservices.com/tr-TR/basin-odasi/primeclass,-oman-leadership-awards-2025%E2%80%99te-uc-odul-birden-kazandi"
             },
             card3: {
-                title: "Bir Misafirden Fazlası: Primeclass'ı Tanımlayan Kişiselleştirilmiş Hizmet.",
-                readTime: "8 dakika",
-                date: "13 Ağustos 2025"
-            },
-            card4: {
-                title: "Bir Misafirden Fazlası: Primeclass'ı Tanımlayan Kişiselleştirilmiş Hizmet.",
-                readTime: "8 dakika",
-                date: "13 Ağustos 2025"
+                title: "TAV İşletme Hizmetleri'nden Sofya Havalimanı'na iki yeni \"Primeclass Lounge\"",
+                date: "22 Nisan 2025",
+                url: "https://tavoperationservices.com/tr-TR/basin-odasi/tav-isletme-hizmetlerinden-sofya-havalimanina-iki-yeni-primeclass-lounge"
             }
         },
         footer: {

@@ -73,6 +73,22 @@ class LanguageManager {
             dataFormLink.href = `assets/docs/data-subject-application-form-${langCode}.pdf`;
             dataFormLink.download = `data-subject-application-form-${langCode}.pdf`;
         }
+
+        // Update story links based on language
+        this.updateStoryLinks();
+    }
+
+    updateStoryLinks() {
+        const storyLinks = document.querySelectorAll('[data-story-link]');
+        
+        storyLinks.forEach(link => {
+            const cardKey = link.getAttribute('data-story-link');
+            
+            if (cardKey && translations[this.currentLang]?.stories?.[cardKey]?.url) {
+                const url = translations[this.currentLang].stories[cardKey].url;
+                link.href = url;
+            }
+        });
     }
 
     applyTranslations() {

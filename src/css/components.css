@@ -375,6 +375,9 @@
 
 .stories__card-title {
     margin-bottom: var(--spacing-3);
+    min-height: 4.5rem;
+    display: flex;
+    align-items: flex-start;
 }
 
 .stories__card-meta {
