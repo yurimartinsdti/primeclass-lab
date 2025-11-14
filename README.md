@@ -50,7 +50,7 @@ primeclass-lab/
 │   └── data/              # Data files
 │       └── translations.js # Bilingual content (EN/PT)
 ├── assets/                # Static assets
-│   ├── images/            # Optimized images (~71MB total)
+│   ├── images/            # Optimized images (~17MB total after cleanup)
 │   ├── icons/             # SVG icons and graphics
 │   └── docs/              # Documentation assets
 ├── PROJECT-STRUCTURE.md   # Detailed project structure guide
